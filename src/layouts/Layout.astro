@@ -1,0 +1,54 @@
+---
+import "../styles/global.css";
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = "Prism",
+	description = "A systems programming language built for explicit behavior and mechanical verification."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+
+        <title>{title}</title>
+
+        <meta
+            name="description"
+            content={description}
+        />
+
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/favicon.svg"
+        />
+
+        <meta
+            property="og:title"
+            content={title}
+        />
+
+        <meta
+            property="og:description"
+            content={description}
+        />
+
+        <slot name="head" />
+    </head>
+
+	<body>
+		<slot />
+	</body>
+</html>

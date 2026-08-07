@@ -1,0 +1,99 @@
+---
+---
+
+<header>
+    <div class="container nav">
+
+        <a class="logo" href="/">
+            Prism
+        </a>
+
+        <nav>
+
+            <a href="/docs">
+                Docs
+            </a>
+
+            <a href="/download">
+                Download
+            </a>
+
+            <a href="/blog">
+                Blog
+            </a>
+
+            <a
+                href="https://github.com/prism-language/prism-lang"
+                target="_blank"
+            >
+                GitHub
+            </a>
+
+        </nav>
+
+    </div>
+</header>
+
+<style>
+
+header{
+
+    position:sticky;
+
+    padding: 0 .5rem;
+
+    top:0;
+
+    backdrop-filter:blur(12px);
+
+    background:rgba(11,11,15,.7);
+
+    border-bottom:1px solid var(--border);
+
+    z-index:100;
+
+}
+
+.nav{
+
+    height:72px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.logo{
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:2.5rem;
+
+}
+
+nav a{
+
+    color:var(--muted);
+
+    transition:.2s;
+
+}
+
+nav a:hover{
+
+    color:white;
+
+}
+
+</style>

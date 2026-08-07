@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Download">
+    <Navbar />
+
+    <main class="container page">
+
+        <h1>Download</h1>
+
+        <p>
+            Prism is currently under active development and is not yet available
+            for download.
+        </p>
+
+        <p>
+            Development builds and official releases will be published here once
+            they are ready.
+        </p>
+
+    </main>
+
+    <Footer />
+</Layout>
+
+<style>
+.page {
+    max-width: 800px;
+    padding: 5rem 0;
+}
+
+.page p {
+    margin-top: 1.5rem;
+    line-height: 1.8;
+}
+</style>

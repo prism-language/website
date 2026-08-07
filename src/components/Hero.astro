@@ -1,0 +1,209 @@
+---
+import Button from "./Button.astro";
+
+const example = `pub fn main()
+{
+    println("Hello, Prism!");
+}`;
+---
+
+<section class="hero">
+
+    <div class="container">
+
+        <div>
+
+            <span class="eyebrow">
+                Programming Language
+            </span>
+
+            <h1>Prism</h1>
+
+            <p>
+                A systems programming language built for explicit behavior,
+                predictable execution and mechanical verification.
+            </p>
+
+            <div class="buttons">
+                <Button href="/download">
+                    Download
+                </Button>
+
+                <Button
+                    href="/docs"
+                    variant="secondary"
+                >
+                    Documentation
+                </Button>
+            </div>
+
+        </div>
+
+        <div class="editor">
+
+            <div class="editor-header">
+
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span class="filename">
+                    example.pr
+                </span>
+
+            </div>
+
+            <pre><code>{example}</code></pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.hero {
+    padding: 7rem 0;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.eyebrow {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.hero p {
+    margin: 1.5rem 0 2rem;
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.editor {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.editor-header {
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 0 1rem;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(255,255,255,.02);
+}
+
+.dots {
+    display: flex;
+    gap: .45rem;
+}
+
+.dots span {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: var(--border);
+}
+
+.filename {
+    color: var(--muted);
+    font-size: .9rem;
+    font-family: "JetBrains Mono", monospace;
+}
+
+pre {
+    margin: 0;
+    padding: 2rem;
+    overflow: auto;
+    background: transparent;
+}
+
+code {
+    font-family: "JetBrains Mono", Consolas, monospace;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+code {
+    font-family: "JetBrains Mono", Consolas, monospace;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.eyebrow{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+.hero p{
+
+    margin-top:1.5rem;
+
+    font-size:1.2rem;
+
+    max-width:620px;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    gap:1rem;
+
+    margin:2.5rem 0;
+
+}
+
+pre{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    padding:1.5rem;
+
+    border-radius:16px;
+
+    overflow:auto;
+
+}
+
+code{
+
+    font-family:Consolas, monospace;
+
+}
+
+</style>
